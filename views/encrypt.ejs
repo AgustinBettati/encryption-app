@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Encryption App</title>
+  <%include partials/refrences%>
+</head>
+  <body>
+    <%include partials/navBar.ejs%>
+    <script type="text/javascript">
+    var d = document.getElementById("encrypt");
+    d.className += "active";
+    </script>
+
+    <h1 class="text-center">Encriptar nueva informacion</h1>
+
+    <div class="row" style="padding-top: 30px">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+
+        <form id="encrypt-form" method="POST" action="/encrypt">
+
+        <table>
+          <tr>
+            <td><label for="name">Nombre de lo que se va a encriptar</label></td>
+            <td><input name="name" type="text"></td>
+          </tr>
+          <tr>
+            <td><label for="data">La informacion a encriptar</label></td>
+            <td><textarea form="encrypt-form" name="data" cols="40" rows="5"></textarea></td>
+          </tr>
+          <tr>
+            <td><label for="password">Clave de encriptacion</label></td>
+            <td><input name="password" type="password"></td>
+          </tr>
+        </table>
+        <input type="submit"value="Encriptar" style="margin-top: 20px" class="btn btn-primary btn-lg">
+
+        </form>
+      </div>
+      <div class="col-xs-3"></div>
+
+    </div>
+
+
+  </body>
+</html>

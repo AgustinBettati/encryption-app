@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encryption App</title>
+    <%include partials/refrences.ejs%>
+  </head>
+  <body>
+    <%include partials/navBar.ejs%>
+    <script type="text/javascript">
+    var d = document.getElementById("decrypt");
+    d.className += "active";
+    </script>
+    <h2 class="text-center">Desencriptacion completa!</h2>
+    <div class="row" style="padding-top: 30px">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+        <p>La informacion encriptada de <%= data.name%> es</p>
+        <p class="lead"><%= data.text%></p>
+        <form action="/">
+          <input type="submit" value="Volver" class="btn btn-primary"/>
+        </form>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+
+
+  </body>
+</html>

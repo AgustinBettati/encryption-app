@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encryption App</title>
+    <%include partials/refrences.ejs%>
+  </head>
+  <body>
+    <%include partials/navBar.ejs%>
+    <script type="text/javascript">
+    var d = document.getElementById("home");
+    d.className += "active";
+    </script>
+
+    <h1 class="text-center">Encryption App</h1>
+
+    <div class="row" style="padding-top: 30px">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+        <!-- <h2>Esta aplicacion utiliza la libreria "Crypto" del npm, usando
+          el algoritmo AES-256 modo CTR.</h2> -->
+        <p class="lead">A continuacion se encuentran los items que estan encriptados:</p>
+        <ul id="list-of-items">
+          <% for( var i = 0; i < data.length; i++) { %>
+            <li id="items"><%= data[i].name %></li>
+          <% } %>
+        </ul>
+        <p>Mas informacion acerca de las librerias y algoritmos usados se puede encontrar <a href="/about">aca</a>.</p>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+
+  </body>
+</html>

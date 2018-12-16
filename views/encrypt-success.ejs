@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encryption App</title>
+    <%include partials/refrences%>
+  </head>
+  <body>
+    <%include partials/navBar.ejs%>
+    <script type="text/javascript">
+    var d = document.getElementById("encrypt");
+    d.className += "active";
+    </script>
+
+    <h2 class="text-center">Encriptacion completada</h2>
+
+    <div class="row" style="padding-top: 30px">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+        <p>Su informacion de <%= data.name%> se a encriptado con exito.</p>
+        <p class="lead">El cipher generado es <%= data.cipher%></p>
+        <form action="/">
+          <input type="submit" value="Volver" class="btn btn-primary"/>
+        </form>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+
+  </body>
+</html>

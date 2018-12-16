@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encryption App</title>
+    <%include partials/refrences%>
+  </head>
+  <body>
+    <%include partials/navBar.ejs%>
+    <script type="text/javascript">
+    var d = document.getElementById("decrypt");
+    d.className += "active";
+    </script>
+    <h2 class="text-center">Desencriptacion incompleta</h2>
+    <div class="row" style="padding-top: 30px">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+        <p>La informacion de <%= data.name%> no se pudo desencriptar, vuelva a intetar con otra clave.</p>
+        <form action="/decrypt">
+          <input type="submit" value="Volver a intentar" class="btn btn-primary"/>
+        </form>
+        <form action="/">
+          <input type="submit" value="Ir a pagina principal" class="btn btn-primary" style="margin-top: 10px"/>
+        </form>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+  </body>
+</html>

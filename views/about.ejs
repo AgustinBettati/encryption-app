@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encryption App</title>
+    <%include partials/refrences.ejs%>
+  </head>
+  <body>
+    <%include partials/navBar.ejs%>
+    <script type="text/javascript">
+    var d = document.getElementById("about");
+    d.className += "active";
+    </script>
+
+    <h2 class="text-center">Utilidad de la aplicacion</h2>
+
+    <div class="row" style="padding-top: 30px">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-8">
+        <p class="lead">Puede servir para gaurdar con mucha seguridad cualquier tipo de informacion de texto.</p>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+
+    <h2 class="text-center">Tecnologias usadas</h2>
+
+    <div class="row" style="padding-top: 30px">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-8">
+        <p class="lead">Esta aplicacion es desarrollada en Node.js, y por lo tanto hice uso de la libreria "Crypto" del npm, usando
+          el algoritmo AES-256 modo CTR para encriptar y decriptar la informacion.</p>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+
+  </body>
+</html>
